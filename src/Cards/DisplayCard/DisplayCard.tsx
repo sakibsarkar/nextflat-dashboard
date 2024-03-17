@@ -22,6 +22,12 @@ interface propsType {
 const DisplayCard: React.FC<propsType> = ({ data }) => {
     const [selected, setSelected] = useState<number>(0)
 
+
+
+
+    // --- total number of image ---
+    const totalImg = data.images.length
+
     // next image slide
     const nextImg = () => {
 
@@ -37,6 +43,20 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
     }
 
+    // prev image slide 
+    const prevImg = () => {
+
+        // --- index of the last image
+        const lastImg = data.images.length - 1;
+
+        // check isfirst image
+        if (selected === 0) {
+            return setSelected(lastImg)
+        }
+
+        setSelected(selected - 1)
+    }
+
 
     return (
         <div className="w-full min-h-[195px] bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] flex justify-start items-start gap-[16px] rounded-[10px]">
@@ -50,14 +70,24 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                     </div>)
                 }
 
-                <div className="absolute w-full h-full flex justify-between items-center">
-                    <button onClick={() => setSelected(selected - 1)}>
+                <div className="absolute w-full h-full flex  justify-between items-center">
+                    <button onClick={prevImg}>
                         <Image src={"/images/left.png"} alt="right" width={25.18} height={27} />
                     </button>
 
                     <button onClick={nextImg}>
                         <Image src={"/images/right.png"} alt="right" width={25.18} height={27} />
                     </button>
+
+                    <div className="absolute w-full bottom-[12.47px] flex justify-center items-center gap-[10px]">
+                        {
+                            Array.from({ length: totalImg }).fill("").map((_, i) => <div
+                                key={i + "dot"}
+                                className={`w-[10px] h-[10px] ${i === selected ? "bg-[#0080FF]" : "bg-[#BBBBBF]"} rounded-full cursor-pointer`}
+                                onClick={() => setSelected(i)}
+                            ></div>)
+                        }
+                    </div>
 
                 </div>
             </div>
