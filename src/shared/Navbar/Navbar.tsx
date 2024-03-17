@@ -4,7 +4,7 @@ import FlagIcon from "@/utils/icons/FlagIcon";
 import HousePlusIcon from "@/utils/icons/HousePlusIcon";
 import Image from "next/image";
 import Link from "next/link";
-import ModeChangerToggle from "@/utils/ToggleButtons/ModeChangerToggle";
+import ModeChangerToggle from "@/utils/toggleButtons/ModeChangerToggle";
 import SearchIcon from "@/utils/icons/SearchIcon";
 
 const Navbar = () => {
