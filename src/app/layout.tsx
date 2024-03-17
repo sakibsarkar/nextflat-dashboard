@@ -1,5 +1,7 @@
 import "./globals.css";
+import MapBox from "@/components/MapBox/MapBox";
 import Navbar from "@/shared/Navbar/Navbar";
+import Sidebar from "@/shared/Sidebar/Sidebar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -21,12 +23,14 @@ export default function RootLayout({
         <div className="flex flex-col justify-start items-start h-screen w-screen overflow-hidden">
           <Navbar />
 
-          <div>
-
+          {/* bottom  */}
+          <div className="h-full w-full flex justify-start items-start bg-red-500">
+            <Sidebar />
+            <MapBox />
             {children}
           </div>
 
-          
+
         </div>
       </body>
     </html>
