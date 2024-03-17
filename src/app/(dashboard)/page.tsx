@@ -18,7 +18,7 @@ export default function Home() {
 
 
 
-        <div className="w-full h-full pl-[15px] pr-[8px] overflow-y-auto flex flex-col gap-[6px]">
+        <div className="w-full h-full pl-[15px] pr-[8px] overflow-y-auto flex flex-col gap-[6px] smoothBar">
           {
             displayData.map((data, i) => <DisplayCard key={"dt" + i} data={data} />)
           }

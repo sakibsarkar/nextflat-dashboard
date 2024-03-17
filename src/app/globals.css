@@ -17,8 +17,18 @@
   }
 }
 
-.roomsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 81.17px);
-  gap: 6.03px 15.22px;
+
+.smoothBar::-webkit-scrollbar {
+  width: 8px;
+  opacity: 1;
+
+}
+
+.smoothBar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.smoothBar:hover::-webkit-scrollbar-thumb {
+  background-color: #C1C1C1;
 }

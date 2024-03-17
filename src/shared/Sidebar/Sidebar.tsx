@@ -15,33 +15,56 @@ const Sidebar = () => {
         boxShadow: "0px 20px 25px -5px rgba(15, 23, 42, 0.10), 0px 10px 10px 0px rgba(15, 23, 42, 0.05)"
     }
 
+    // sidebar hide style
+    const hideStyle = {
+        minWidth: "64px",
+        transition: "0.3s",
+        padding: "16px"
+    }
+
 
     return (
-        <div className="min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between">
-            <div className=" flex justify-center items-start gap-[16px] relative w-full">
-                <div className="bg-[#2D68FE] center w-[32px] h-[32px] rounded-[4px]">
+        <div className="min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between duration-[0.3s]"
+            style={showBar ? {} : hideStyle}
+        >
+            <div className=" flex justify-start items-start gap-[16px] relative w-full">
+                <div className="bg-[#2D68FE] center w-[32px] h-[32px] rounded-[4px]" onClick={() => setShowBar(true)}>
                     <FilterIcon />
                 </div>
-                <h1 className="text-[24px] font-[600] text-[#324054]">Filters</h1>
+                {
 
+                    showBar ? <h1 className="text-[24px] font-[600] text-[#324054]">Filters</h1> : ""
+                }
 
-                <div className="w-[48px] h-[48px] center bg-white rounded-full absolute right-0 cursor-pointer" style={boxShadow}>
-                    <SideArrowIcon />
-                </div>
+                {
+                    showBar ?
+                        <div className="w-[48px] h-[48px] center bg-white rounded-full absolute right-0 cursor-pointer" style={boxShadow} onClick={() => setShowBar(false)}>
+                            <SideArrowIcon />
+                        </div>
+                        :
+                        ""
+                }
             </div>
 
-            <div className="flex flex-col items-center justify-start w-full gap-[12px]">
+            <div className={`flex flex-col items-center justify-start w-full ${showBar ? "gap-[12px]" : "gap-[24px]"} duration-[0.3s]`}>
                 {
                     Navlinks.map(({ Icon, id, text }) => <div
                         key={id}
-                        className="flex justify-start items-center gap-[16px] w-full cursor-pointer p-[12px]"
+                        className={`flex justify-start items-center w-full cursor-pointer ${showBar ? "p-[12px] gap-[16px]" : ""}`}
                     >
                         <Icon />
-                        <p>{text}</p>
+                        {
+                            showBar ? <p>{text}</p> : ""
+                        }
 
                     </div>)
                 }
             </div>
+
+            {
+                showBar ? "" : <div className="w-[32px] h-[32px]"></div>
+            }
+
         </div>
     );
 };

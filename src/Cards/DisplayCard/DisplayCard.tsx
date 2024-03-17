@@ -62,7 +62,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
         <div className="w-full min-h-[195px] bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] flex justify-start items-start gap-[16px] rounded-[10px]">
 
             {/* images */}
-            <div className="w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
+            <div className="min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
 
                 {
                     data.images.map((img, i) => <div key={"img" + i} className={`w-full h-full absolute top-0 left-0 ${i === selected ? "opacity-1" : "opacity-0"} duration-[0.4s]`}>
@@ -93,7 +93,9 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
             </div>
 
             {/* details */}
-            <div className="flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px]">
+            <div className="w-full flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px] relative">
+
+                <p className="absolute text-[24px] font-[700] top-[73px] right-[23px]">{data.price}</p>
 
                 <div className="flex flex-col gap-[5.91px]">
                     <div className="flex flex-col gap-[0px]">
@@ -109,16 +111,18 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                     </div>
                 </div>
 
-                <div className="flex justify-start items-center gap-[7.36px]">
-                    {
-                        data.links.map((link, i) => <Link href={link.href} key={i + "link"} className="flex gap-[5.04px] items-center font-[300] text-[12px]">
-                            <LinkIcon />  Link {i + 1}
+                <div className="flex justify-between w-full items-center">
+                    <div className="flex justify-center items-center gap-[7.36px]">
+                        {
+                            data.links.map((link, i) => <Link href={link.href} key={i + "link"} className="flex gap-[5.04px] items-center font-[300] text-[12px]">
+                                <LinkIcon />  Link {i + 1}
 
-                        </Link>)
-                    }
+                            </Link>)
+                        }
+                    </div>
 
                     <button className="w-[93px] h-[40px] px-[14px] flex items-center gap-[10px] bg-white rounded-[6px]">
-                        <ArrowLeft />  Apply
+                        Apply  <ArrowLeft />
                     </button>
                 </div>
             </div>
