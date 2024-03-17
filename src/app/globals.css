@@ -11,4 +11,8 @@
   .col-center {
     @apply flex flex-col justify-center items-center
   }
+
+  .imgFit {
+    @apply w-full h-full object-cover
+  }
 }

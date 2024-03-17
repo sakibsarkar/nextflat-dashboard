@@ -11,7 +11,7 @@ const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
                 <Navbar />
 
                 {/* bottom  */}
-                <div className="h-full w-full flex justify-start items-start bg-red-500">
+                <div className="h-full w-full flex justify-start items-star">
                     <Sidebar />
                     <MapBox />
                     {children}
