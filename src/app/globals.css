@@ -16,3 +16,9 @@
     @apply w-full h-full object-cover
   }
 }
+
+.roomsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 81.17px);
+  gap: 6.03px 15.22px;
+}

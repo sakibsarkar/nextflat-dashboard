@@ -17,7 +17,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className="min-w-[288px] h-full p-[20px] bg-slate-200 flex flex-col items-center justify-between">
+        <div className="min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between">
             <div className=" flex justify-center items-start gap-[16px] relative w-full">
                 <div className="bg-[#2D68FE] center w-[32px] h-[32px] rounded-[4px]">
                     <FilterIcon />
