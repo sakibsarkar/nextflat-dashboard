@@ -4,11 +4,17 @@ import React, { useEffect, useState } from "react";
 
 type DataType = {
     imgData: string[];
+    width?: number,
+    height?: number
 }
 
 
 
-const ImageSlider: React.FC<DataType> = ({ imgData }) => {
+const ImageSlider: React.FC<DataType> = ({ imgData, width, height }) => {
+
+
+    const Width = width || 252
+    const Height = height || 176
 
 
     const [selected, setSelected] = useState<number>(0)
@@ -49,21 +55,14 @@ const ImageSlider: React.FC<DataType> = ({ imgData }) => {
 
 
     return (
-        <div className="w-full h-full">
-
-
+        <div className="w-full h-full relative">
 
             {/* images  */}
             {
                 imgData.map((img, i) => <div key={"img" + i} className={`w-full h-full absolute left-0 ${i === selected ? "top-[0] opacity-1" : "top-[100%] opacity-0"} duration-[0.4s]`}>
-                    <Image width={252} height={176} src={img} alt="img" className={`absolute top-0 left-0 imgFit`} />
+                    <Image width={Width} height={Height} src={img} alt="img" className={`absolute top-0 left-0 imgFit`} />
                 </div>)
             }
-
-
-
-
-
             <div className="absolute w-full h-full flex  justify-between items-center">
                 <button onClick={prevImg}>
                     <Image src={"/images/left.png"} alt="right" width={25.18} height={27} />

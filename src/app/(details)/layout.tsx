@@ -6,9 +6,9 @@ const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <div className="mx-auto max-w-[1440px] h-screen flex flex-col items-start justify-start gap-[31px]">
             <Navbar />
-            <div className="sectionHeight w-full flex justify-start items-start gap-[16px]  pl-[53px]">
+            <main className="sectionHeight w-full flex justify-start items-start gap-[16px]  pl-[53px]">
 
-                <div className="w-full h-full bg-red-400">
+                <div className="w-full h-full">
                     {children}
                 </div>
 
@@ -16,7 +16,7 @@ const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
                     <MapBox />
                 </div>
 
-            </div>
+            </main>
         </div>
     );
 };
