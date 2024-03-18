@@ -2,7 +2,7 @@
 import ArrowDownIcon from "@/utils/icons/ArrowDownIcon";
 import FilterIcon from "@/utils/icons/FilterIcon";
 import SideArrowIcon from "@/utils/icons/SideArrowIcon";
-import { useContext } from "react";
+import { useContext, useLayoutEffect } from "react";
 import { StateContext } from "@/provider/ContextProvieder/ContextProvieder";
 import { Navlinks } from "@/utils/mock/Links/Navlinks";
 
@@ -22,6 +22,18 @@ const Sidebar = () => {
         transition: "0.3s",
         padding: "16px"
     }
+
+
+    // run only once 
+    useLayoutEffect(() => {
+
+        // get the device width
+        const width = window.screen.width;
+        if (width && width <= 880) {
+            setShowBar(false)
+        }
+
+    }, [setShowBar])
 
 
     return (
