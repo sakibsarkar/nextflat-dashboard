@@ -1,5 +1,6 @@
 "use client";
 import ArrowLeft from "@/utils/icons/ArrowLeft";
+import EyeIcon from "@/utils/icons/EyeIcon";
 import Image from "next/image";
 import Link from "next/link";
 import LinkIcon from "@/utils/icons/LinkIcon";
@@ -8,6 +9,8 @@ import React, { useState } from "react";
 type DataType = {
     name: string;
     subName: string;
+    views: number,
+    year: number,
     rooms: string[];
     price: string;
     images: string[];
@@ -58,14 +61,30 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
     return (
         <div className="w-full min-h-[195px] bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] flex justify-start items-start gap-[16px] rounded-[10px]">
 
-            {/* images */}
+            {/* image slider */}
             <div className="min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
 
+
+
+                {/* images  */}
                 {
                     data.images.map((img, i) => <div key={"img" + i} className={`w-full h-full absolute top-0 left-0 ${i === selected ? "opacity-1" : "opacity-0"} duration-[0.4s]`}>
                         <Image width={252} height={176} src={img} alt="img" className={`absolute top-0 left-0 imgFit `} />
                     </div>)
                 }
+
+
+                {/* viwes*/}
+                <div className="absolute top-[9.81px] left-[12.87px] w-[56px] h-[30px] pl-[5px] pr-[10px] center bg-[#00000080] text-white rounded-[5px]">
+
+                    <EyeIcon />  <p className="text-[10px] font-[9000]">{data.views}</p>
+                </div>
+
+                {/* year */}
+                <div className="absolute top-[9.81px] left-[87.87px] w-[44px] h-[30px] p-[5px] center bg-[#00000080] text-white rounded-[5px]">
+                    <p className="text-[10px] font-[9000]">{data.year}</p>
+                </div>
+
 
                 <div className="absolute w-full h-full flex  justify-between items-center">
                     <button onClick={prevImg}>
