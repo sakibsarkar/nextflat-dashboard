@@ -46,12 +46,34 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
             </div>
 
+
+            {/* flat details */}
             <div className="flex justify-between items-center w-full mt-[27px]">
                 <p className="text-[16px] italic font-[300]">{flat.subName}</p>
                 <h2 className="text-[24px] font-[700]">{flat.price}</h2>
                 <button className="w-[93px] center gap-[10px] bg-[#F0F2F6] rounded-[6px] pt-[9px] pb-[11px]">
                     Apply <ArrowLeft />
                 </button>
+            </div>
+
+
+            {/* flat area info */}
+
+            <div className="flex flex-col items-start justify-start gap-[6.22px] mt-[2px] mb-[22px]">
+                {
+                    flat.rooms.map((room, i) => <p
+                        key={i + "jj"}
+                        className="font-[500] textt-[14px]"
+                    >
+                        {room}
+                    </p>)
+                }
+            </div>
+
+
+            {/* google ads*/}
+            <div className="w-[574px] h-[124px] bg-[#8D4E83] mx-auto center text-white">
+                Google ads
             </div>
 
         </div>

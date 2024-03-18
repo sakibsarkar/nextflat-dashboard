@@ -14,7 +14,7 @@ type DataType = {
     name: string;
     subName: string;
     views: number,
-    year: number,
+    apply: number,
     rooms: string[];
     price: string;
     images: string[];
@@ -47,7 +47,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
                 {/* year */}
                 <div className="absolute top-[9.81px] left-[87.87px] w-[44px] h-[30px] p-[5px] center bg-[#00000080] text-white rounded-[5px]">
-                    <p className="text-[10px] font-[9000]">{data.year}</p>
+                    <p className="text-[10px] font-[9000]">{data.apply}</p>
                 </div>
 
 
