@@ -71,7 +71,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
                 {/* images  */}
                 {
-                    data.images.map((img, i) => <div key={"img" + i} className={`w-full h-full absolute top-0 left-0 ${i === selected ? "opacity-1" : "opacity-0"} duration-[0.4s]`}>
+                    data.images.map((img, i) => <div key={"img" + i} className={`w-full h-full absolute left-0 ${i === selected ? "top-[0]" : "top-[100%]"} duration-[0.5s]`}>
                         <Image width={252} height={176} src={img} alt="img" className={`absolute top-0 left-0 imgFit `} />
                     </div>)
                 }
