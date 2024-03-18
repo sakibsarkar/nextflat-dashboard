@@ -31,14 +31,10 @@ export default function Home() {
 
         </div>
 
-
-
         <div className="flex xsm:hidden justify-start items-center gap-[5px] py-[8px] px-[7px] border-[1px] border-[#6d6d6d] w-fit rounded-md mt-[20px] ml-[10px]">
           <button className="text-[14px] font-[500]">View Filter Option</button>
           <ArrowDownIcon />
         </div>
-
-
 
 
         <div className="w-full h-full pr-[8px] overflow-y-auto flex flex-col gap-[6px] smoothBar">

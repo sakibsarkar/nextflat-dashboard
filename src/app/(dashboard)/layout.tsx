@@ -14,7 +14,9 @@ const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
                 <div className="sectionHeight w-full flex justify-start items-star relative pl-[64px] md:pl-[0]">
                     <Sidebar />
                     <div className="w-full h-full flex flex-col justify-start items-start gap-[15px] lg:flex-row">
-                        <MapBox />
+                        <div className={`w-full duration-[0.3s] min-h-[200px]  xsm:min-h-[300px] lg:h-full`}>
+                            <MapBox />
+                        </div>
                         {children}
                     </div>
                 </div>

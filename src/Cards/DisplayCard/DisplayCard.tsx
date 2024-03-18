@@ -3,15 +3,14 @@ import ArrowLeft from "@/utils/icons/ArrowLeft";
 import EyeCloseIcon from "@/utils/icons/EyeCloseIcon";
 import EyeIcon from "@/utils/icons/EyeIcon";
 import HeartIcon from "@/utils/icons/HeartIcon";
-import Image from "next/image";
 import ImageSlider from "@/components/ImageSlider";
 import Link from "next/link";
 import LinkIcon from "@/utils/icons/LinkIcon";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ShareIcon from "@/utils/icons/ShareIcon";
-import { clearInterval } from "timers";
 
 type DataType = {
+    id: string
     name: string;
     subName: string;
     views: number,
@@ -89,7 +88,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
                 <div className="flex flex-col gap-[5.91px]">
                     <div className="flex flex-col gap-[0px]">
-                        <h1 className="text-[24px] font-[500]">{data.name}</h1>
+                        <Link href={`/flat/${data.id}`} className="text-[24px] font-[500]">{data.name}</Link>
                         <p className="text-[16px] font-[300] italic">{data.subName}</p>
                     </div>
 
