@@ -9,13 +9,15 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      'sm': '640px',
+      "xsm": "450px",
+
+      'sm': '700px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '880px',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      'lg': '1270px',
       // => @media (min-width: 1024px) { ... }
 
       'xl': '1470px',

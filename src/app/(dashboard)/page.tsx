@@ -10,25 +10,32 @@ export default function Home() {
     <main className="w-full h-full">
       <div className="flex flex-col gap-[18px] w-full h-full">
 
-        <div className="flex justify-between items-center pl-[25px]">
+        <div className="hidden justify-between items-center xsm:pl-[25px] xsm:flex">
           <div className="flex justify-start items-center gap-[8px]">
-            <p>Sale</p>
+            <p className="text-[12px] sm:text-[14px] font-[500]">Sale</p>
             <ToggleButton />
             <p>Rent</p>
           </div>
 
-          <div className="flex justify-between items-center gap-[16px] p-[12px]">
+          <div className="flex justify-between items-center gap-[16px] py-[12px] sm:p-[12px]">
             <MoneyIcon />
-            <p>Price</p>
+            <p className="text-[12px] sm:text-[16px] font-[500]">Price</p>
             <ArrowDownIcon />
           </div>
 
-          <div className="flex justify-between items-center gap-[16px] p-[12px]">
+          <div className="flex justify-between items-center gap-[16px] py-[12px] sm:p-[12px]">
             <ShortByIcon />
-            <p>Sort By</p>
+            <p className="text-[12px] sm:text-[16px] font-[500]">Sort By</p>
             <ArrowDownIcon />
           </div>
 
+        </div>
+
+
+
+        <div className="flex xsm:hidden justify-start items-center gap-[5px] py-[8px] px-[7px] border-[1px] border-[#6d6d6d] w-fit rounded-md mt-[20px] ml-[10px]">
+          <button className="text-[14px] font-[500]">View Filter Option</button>
+          <ArrowDownIcon />
         </div>
 
 

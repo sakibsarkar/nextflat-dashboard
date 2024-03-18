@@ -11,10 +11,12 @@ const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
                 <Navbar />
 
                 {/* bottom  */}
-                <div className="h-full w-full flex justify-start items-star">
+                <div className="h-full w-full flex justify-start items-star relative">
                     <Sidebar />
-                    <MapBox />
-                    {children}
+                    <div className="w-full h-full flex flex-col justify-start items-start lg:flex-row">
+                        <MapBox />
+                        {children}
+                    </div>
                 </div>
 
 

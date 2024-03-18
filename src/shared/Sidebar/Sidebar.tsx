@@ -25,7 +25,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className="min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between duration-[0.3s]"
+        <div className={`min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between duration-[0.3s] ${showBar ? "absolute" : "static"} top-0 left-0 md:static z-20 bg-white`}
             style={showBar ? {} : hideStyle}
         >
             <div className=" flex justify-start items-start gap-[16px] relative w-full">

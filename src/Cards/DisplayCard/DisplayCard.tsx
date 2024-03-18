@@ -62,10 +62,10 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
 
     return (
-        <div className="w-full min-h-[195px] bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] flex justify-start items-start gap-[16px] rounded-[10px]">
+        <div className="w-full sm:min-h-[195px] h-auto  bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] flex justify-start flex-col items-start gap-[16px] rounded-[10px] sm:flex-row">
 
             {/* image slider */}
-            <div className="min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
+            <div className="w-full sm:min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
 
 
 
@@ -109,13 +109,10 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                     </div>
 
                 </div>
-            </div>
 
-            {/* details */}
-            <div className="w-full flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px] relative">
 
-                {/* activity options*/}
-                <div className="flex justify-between items-center gap-[9.64px] absolute top-[8px] right-[5.8px]">
+                {/* activity optiion  for small device */}
+                <div className="flex sm:hidden justify-between items-center gap-[9.64px] absolute top-[8px] right-[5.8px]">
                     <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
                         <ShareIcon />
                     </div>
@@ -126,6 +123,26 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                         <EyeCloseIcon />
                     </div>
                 </div>
+
+            </div>
+
+            {/* details */}
+            <div className="w-full flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px] relative">
+
+                {/* activity options*/}
+                <div className="hidden sm:flex justify-between items-center gap-[9.64px] absolute top-[8px] right-[5.8px]">
+                    <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
+                        <ShareIcon />
+                    </div>
+                    <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
+                        <HeartIcon />
+                    </div>
+                    <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
+                        <EyeCloseIcon />
+                    </div>
+                </div>
+
+
 
                 <p className="absolute text-[24px] font-[700] top-[73px] right-[23px]">{data.price}</p>
 
