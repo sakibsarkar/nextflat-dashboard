@@ -62,7 +62,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
 
     return (
-        <div className="w-full sm:min-h-[195px] h-auto  bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] flex justify-start flex-col items-start gap-[16px] rounded-[10px] sm:flex-row">
+        <div className="w-full lg:min-h-[195px] h-auto  bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] sm:pt-[0px] lg:pt-[7.19px] flex justify-start flex-col items-center lg:items-start gap-[16px] rounded-[10px] sm:flex-row">
 
             {/* image slider */}
             <div className="w-full sm:min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
@@ -127,7 +127,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
             </div>
 
             {/* details */}
-            <div className="w-full flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px] relative">
+            <div className="w-full flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px] relative lg:pb-[0px] pb-[10px]">
 
                 {/* activity options*/}
                 <div className="hidden sm:flex justify-between items-center gap-[9.64px] absolute top-[8px] right-[5.8px]">
@@ -160,8 +160,8 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                     </div>
                 </div>
 
-                <div className="flex justify-between w-full items-center">
-                    <div className="flex justify-center items-center gap-[7.36px]">
+                <div className="flex justify-end xsm:justify-between w-full items-center">
+                    <div className="hidden xsm:flex justify-center items-center gap-[7.36px]">
                         {
                             data.links.map((link, i) => <Link href={link.href} key={i + "link"} className="flex gap-[5.04px] items-center font-[300] text-[12px]">
                                 <LinkIcon />  Link {i + 1}
