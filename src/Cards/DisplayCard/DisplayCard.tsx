@@ -22,9 +22,6 @@ interface propsType {
 const DisplayCard: React.FC<propsType> = ({ data }) => {
     const [selected, setSelected] = useState<number>(0)
 
-
-
-
     // --- total number of image ---
     const totalImg = data.images.length
 
