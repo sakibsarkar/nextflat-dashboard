@@ -1,4 +1,7 @@
+import ArrowDownIcon from "@/utils/icons/ArrowDownIcon";
 import DisplayCard from "@/Cards/DisplayCard/DisplayCard";
+import MoneyIcon from "@/utils/icons/MoneyIcon";
+import ShortByIcon from "@/utils/icons/ShortByIcon";
 import ToggleButton from "@/utils/toggleButtons/ToggleButton";
 import { displayData } from "@/utils/mock/Data/DisplayData";
 
@@ -13,6 +16,19 @@ export default function Home() {
             <ToggleButton />
             <p>Rent</p>
           </div>
+
+          <div className="flex justify-between items-center gap-[16px] p-[12px]">
+            <MoneyIcon />
+            <p>Price</p>
+            <ArrowDownIcon />
+          </div>
+
+          <div className="flex justify-between items-center gap-[16px] p-[12px]">
+            <ShortByIcon />
+            <p>Sort By</p>
+            <ArrowDownIcon />
+          </div>
+
         </div>
 
 

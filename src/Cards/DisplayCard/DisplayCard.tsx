@@ -1,10 +1,13 @@
 "use client";
 import ArrowLeft from "@/utils/icons/ArrowLeft";
+import EyeCloseIcon from "@/utils/icons/EyeCloseIcon";
 import EyeIcon from "@/utils/icons/EyeIcon";
+import HeartIcon from "@/utils/icons/HeartIcon";
 import Image from "next/image";
 import Link from "next/link";
 import LinkIcon from "@/utils/icons/LinkIcon";
 import React, { useState } from "react";
+import ShareIcon from "@/utils/icons/ShareIcon";
 
 type DataType = {
     name: string;
@@ -110,6 +113,19 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
             {/* details */}
             <div className="w-full flex flex-col items-start justify-start gap-[2.66px] pt-[2.87px] relative">
+
+                {/* activity options*/}
+                <div className="flex justify-between items-center gap-[9.64px] absolute top-[8px] right-[5.8px]">
+                    <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
+                        <ShareIcon />
+                    </div>
+                    <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
+                        <HeartIcon />
+                    </div>
+                    <div className="rounded-full center w-[32px] h-[32px] bg-[#E2E8F0]">
+                        <EyeCloseIcon />
+                    </div>
+                </div>
 
                 <p className="absolute text-[24px] font-[700] top-[73px] right-[23px]">{data.price}</p>
 
