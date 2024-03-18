@@ -29,6 +29,8 @@ const Sidebar = () => {
 
         // get the device width
         const width = window.screen.width;
+
+        // ------hide the side bar by default for small devices -------
         if (width && width <= 880) {
             setShowBar(false)
         }
@@ -37,7 +39,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className={`min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between duration-[0.3s] ${showBar ? "absolute" : "static"} top-0 left-0 md:static z-20 bg-white`}
+        <div className={`min-w-[288px] h-full p-[20px] flex flex-col items-center justify-between duration-[0.3s] ${showBar ? "absolute" : "absolute"} top-0 left-0 md:static z-20 bg-white`}
             style={showBar ? {} : hideStyle}
         >
             <div className=" flex justify-start items-start gap-[16px] relative w-full">

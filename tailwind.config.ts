@@ -12,18 +12,18 @@ const config: Config = {
       "xsm": "450px",
 
       'sm': '700px',
-      // => @media (min-width: 640px) { ... }
+      // => @media (min-width: 700px) { ... }
 
       'md': '880px',
-      // => @media (min-width: 768px) { ... }
+      // => @media (min-width: 880px) { ... }
 
       'lg': '1270px',
-      // => @media (min-width: 1024px) { ... }
+      // => @media (min-width: 1270px) { ... }
 
       'xl': '1470px',
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 1470px) { ... }
 
-      '2xl': '1536px',
+      '2xl': '1920px',
       // => @media (min-width: 1536px) { ... }
     },
 

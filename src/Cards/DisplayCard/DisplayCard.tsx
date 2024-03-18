@@ -4,10 +4,12 @@ import EyeCloseIcon from "@/utils/icons/EyeCloseIcon";
 import EyeIcon from "@/utils/icons/EyeIcon";
 import HeartIcon from "@/utils/icons/HeartIcon";
 import Image from "next/image";
+import ImageSlider from "@/components/ImageSlider";
 import Link from "next/link";
 import LinkIcon from "@/utils/icons/LinkIcon";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ShareIcon from "@/utils/icons/ShareIcon";
+import { clearInterval } from "timers";
 
 type DataType = {
     name: string;
@@ -26,39 +28,8 @@ interface propsType {
 }
 
 const DisplayCard: React.FC<propsType> = ({ data }) => {
-    const [selected, setSelected] = useState<number>(0)
 
-    // --- total number of image ---
-    const totalImg = data.images.length
 
-    // next image slide
-    const nextImg = () => {
-
-        // --- index of the last image
-        const lastImg = data.images.length - 1;
-
-        // check islast image
-        if (selected === lastImg) {
-            return setSelected(0)
-        }
-
-        setSelected(selected + 1)
-
-    }
-
-    // prev image slide 
-    const prevImg = () => {
-
-        // --- index of the last image
-        const lastImg = data.images.length - 1;
-
-        // check isfirst image
-        if (selected === 0) {
-            return setSelected(lastImg)
-        }
-
-        setSelected(selected - 1)
-    }
 
 
     return (
@@ -67,15 +38,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
             {/* image slider */}
             <div className="w-full sm:min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
 
-
-
-                {/* images  */}
-                {
-                    data.images.map((img, i) => <div key={"img" + i} className={`w-full h-full absolute left-0 ${i === selected ? "top-[0] opacity-1" : "top-[100%] opacity-0"} duration-[0.6s]`}>
-                        <Image width={252} height={176} src={img} alt="img" className={`absolute top-0 left-0 imgFit `} />
-                    </div>)
-                }
-
+                <ImageSlider imgData={data.images} />
 
                 {/* viwes*/}
                 <div className="absolute top-[9.81px] left-[12.87px] w-[56px] h-[30px] pl-[5px] pr-[10px] center bg-[#00000080] text-white rounded-[5px]">
@@ -88,27 +51,6 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                     <p className="text-[10px] font-[9000]">{data.year}</p>
                 </div>
 
-
-                <div className="absolute w-full h-full flex  justify-between items-center">
-                    <button onClick={prevImg}>
-                        <Image src={"/images/left.png"} alt="right" width={25.18} height={27} />
-                    </button>
-
-                    <button onClick={nextImg}>
-                        <Image src={"/images/right.png"} alt="right" width={25.18} height={27} />
-                    </button>
-
-                    <div className="absolute w-full bottom-[12.47px] flex justify-center items-center gap-[10px]">
-                        {
-                            Array.from({ length: totalImg }).fill("").map((_, i) => <div
-                                key={i + "dot"}
-                                className={`w-[10px] h-[10px] ${i === selected ? "bg-[#0080FF]" : "bg-[#BBBBBF]"} rounded-full cursor-pointer`}
-                                onClick={() => setSelected(i)}
-                            ></div>)
-                        }
-                    </div>
-
-                </div>
 
 
                 {/* activity optiion  for small device */}
@@ -123,7 +65,6 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                         <EyeCloseIcon />
                     </div>
                 </div>
-
             </div>
 
             {/* details */}

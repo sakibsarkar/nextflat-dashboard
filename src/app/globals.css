@@ -32,3 +32,8 @@
 .smoothBar:hover::-webkit-scrollbar-thumb {
   background-color: #C1C1C1;
 }
+
+
+.sectionHeight {
+  height: calc(100% - 76px);
+}

@@ -7,7 +7,7 @@ import { displayData } from "@/utils/mock/Data/DisplayData";
 
 export default function Home() {
   return (
-    <main className="w-full h-full">
+    <main className="w-full lg:max-w-[591px] lg:min-w-[591px] h-full">
       <div className="flex flex-col gap-[18px] w-full h-full">
 
         <div className="hidden justify-between items-center xsm:pl-[25px] xsm:flex">
@@ -41,7 +41,7 @@ export default function Home() {
 
 
 
-        <div className="w-full h-full pl-[15px] pr-[8px] overflow-y-auto flex flex-col gap-[6px] smoothBar">
+        <div className="w-full h-full pr-[8px] overflow-y-auto flex flex-col gap-[6px] smoothBar">
           {
             displayData.map((data, i) => <DisplayCard key={"dt" + i} data={data} />)
           }
