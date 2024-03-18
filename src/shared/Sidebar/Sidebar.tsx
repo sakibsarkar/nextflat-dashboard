@@ -29,7 +29,7 @@ const Sidebar = () => {
             style={showBar ? {} : hideStyle}
         >
             <div className=" flex justify-start items-start gap-[16px] relative w-full">
-                <div className="bg-[#2D68FE] center w-[32px] h-[32px] rounded-[4px]" onClick={() => setShowBar(true)}>
+                <div className="bg-[#2D68FE] center w-[32px] h-[32px] rounded-[4px] cursor-pointer" onClick={() => setShowBar(true)}>
                     <FilterIcon />
                 </div>
                 {
@@ -50,10 +50,10 @@ const Sidebar = () => {
             <div className={`flex flex-col items-center justify-start w-full ${showBar ? "gap-[12px]" : "gap-[24px]"} duration-[0.3s]`}>
                 {
                     Navlinks.map(({ Icon, id, text }) => <div key={id}
-                        className="flex justify-between items-center w-full hover:bg-[#EFF6FF] rounded-[4px]"
+                        className={`flex justify-between items-center w-full ${showBar ? "p-[12px]" : ""} hover:bg-[#EFF6FF] rounded-md`}
                     >
                         <div
-                            className={`flex justify-start items-center w-full cursor-pointer ${showBar ? "p-[12px] gap-[16px]" : ""}`}
+                            className={`flex justify-start items-center w-full cursor-pointer gap-[16px]`}
                         >
                             <Icon />
                             {
@@ -61,7 +61,11 @@ const Sidebar = () => {
                             }
 
                         </div>
-                        <ArrowDownIcon />
+
+                        {
+                            showBar ? <ArrowDownIcon /> : ""
+                        }
+
                     </div>)
                 }
             </div>
