@@ -13,7 +13,7 @@ const Navbar = () => {
         console.log("hey")
     }
     return (
-        <header className="w-full h-[76px]">
+        <header className="w-full h-[76px] sticky top-0 z-50 bg-white">
 
             <div className="flex justify-between items-center">
                 <div className="flex justify-start items-center gap-[33.56px]">

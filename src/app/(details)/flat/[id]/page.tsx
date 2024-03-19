@@ -43,7 +43,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 </div>
 
 
-                <div className="w-full h-[297px] relative overflow-hidden ">
+                <div className="w-full h-[200px] xsm:h-[297px] sm:h-[400px] relative overflow-hidden ">
                     <ImageSlider imgData={flat.images} width={617} height={297} />
                 </div>
 
@@ -51,7 +51,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
 
             {/* flat details */}
-            <div className="flex justify-between items-center w-full mt-[27px]">
+            <div className="flex justify-between items-center w-full mt-[27px] flex-wrap gap-[10px] my-[10px] xsm:my-[0]">
                 <p className="text-[16px] italic font-[300]">{flat.subName}</p>
                 <h2 className="text-[24px] font-[700]">{flat.price}</h2>
                 <button className="w-[93px] center gap-[10px] bg-[#F0F2F6] rounded-[6px] pt-[9px] pb-[11px]">
@@ -75,7 +75,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
 
             {/* google ads*/}
-            <div className="w-[574px] min-h-[124px] bg-[#8D4E83] mx-auto center text-white">
+            <div className="w-[95%] sm:w-[574px] min-h-[124px] bg-[#8D4E83] mx-auto center text-white">
                 Google ads
             </div>
 
@@ -84,19 +84,19 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
             <div className="w-full flex justify-between items-center gap-[14px] mt-[14px]">
 
-                <div className="w-full px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
+                <div className="w-full px-[10px] xsm:px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
                     <LetterIcon />
                     <div className="flex flex-col items-start justify-start">
-                        <h3 className="textt-[#272D37] font-[600] text-[22px]">{flat.views}</h3>
-                        <p>Total Viewing</p>
+                        <h3 className="text-[#272D37] font-[600] text-[15px] xsm:text-[22px]">{flat.views}</h3>
+                        <p className="text-[12px] xsm:text-[14px]">Total Viewing</p>
                     </div>
                 </div>
 
-                <div className="w-full px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
+                <div className="w-full px-[10px] xsm:px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
                     <LetterIcon />
                     <div className="flex flex-col items-start justify-start">
-                        <h3 className="textt-[#272D37] font-[600] text-[22px]">{flat.apply}</h3>
-                        <p>Total Applies</p>
+                        <h3 className="text-[#272D37] font-[600] text-[15px] xsm:text-[22px]">{flat.apply}</h3>
+                        <p className="text-[12px] xsm:text-[14px]">Total Applies</p>
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
             {/* reviews */}
 
-            <div className="w-[617px] min-h-[100px] center gap-[20px] mt-[26px]">
+            <div className="w-full min-h-[100px] flex-wrap xsm:flex-nowrap center gap-[20px] mt-[26px]">
                 <RatingLeft />
                 <RatingRight />
 
