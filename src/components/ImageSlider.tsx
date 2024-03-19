@@ -1,3 +1,4 @@
+"use client";
 import EyeIcon from "@/utils/icons/EyeIcon";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";

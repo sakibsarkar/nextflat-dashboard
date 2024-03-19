@@ -23,16 +23,17 @@ type DataType = {
 
 
 interface propsType {
-    data: DataType
+    data: DataType,
+    selected?: string
 }
 
-const DisplayCard: React.FC<propsType> = ({ data }) => {
+const DisplayCard: React.FC<propsType> = ({ data, selected }) => {
 
 
 
 
     return (
-        <div className="w-full lg:min-h-[195px] h-auto  bg-[#D9D9D9] pl-[7.3px] pr-[5.8px] pt-[7.19px] sm:pt-[0px] lg:pt-[7.19px] flex justify-start flex-col items-center lg:items-start gap-[16px] rounded-[10px] sm:flex-row">
+        <div className={`w-full lg:min-h-[195px] h-auto ${selected === data.id ? "bg-[#C5DFF6]" : "bg-[#D9D9D9]"}   pl-[7.3px] pr-[5.8px] pt-[7.19px] sm:pt-[0px] lg:pt-[7.19px] flex justify-start flex-col items-center lg:items-start gap-[16px] rounded-[10px] sm:flex-row`}>
 
             {/* image slider */}
             <div className="w-full sm:min-w-[252.87px] h-[176.81px] rounded-[5px] overflow-hidden relative">
