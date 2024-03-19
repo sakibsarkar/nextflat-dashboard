@@ -7,7 +7,7 @@ import { displayData } from "@/utils/mock/Data/DisplayData";
 
 export default function Home() {
   return (
-    <main className="w-full lg:max-w-[591px] lg:min-w-[591px] h-full">
+    <main className="w-full lg:max-w-[591px] lg:min-w-[591px] contentHeight lg:h-full">
       <div className="flex flex-col gap-[18px] w-full h-full">
 
         <div className="hidden justify-between items-center xsm:pl-[25px] xsm:flex">

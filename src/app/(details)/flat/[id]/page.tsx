@@ -5,7 +5,10 @@ import CrossIcon from "@/utils/icons/CrossIcon";
 import DisplayCard from "@/Cards/DisplayCard/DisplayCard";
 import HeartIcon from "@/utils/icons/HeartIcon";
 import ImageSlider from "@/components/ImageSlider";
+import LetterIcon from "@/utils/icons/LetterIcon";
 import Navbar from "@/shared/Navbar/Navbar";
+import RatingLeft from "@/components/Ratings/RatingLeft";
+import RatingRight from "@/components/Ratings/RatingRight";
 import React from "react";
 import ShareIcon from "@/utils/icons/ShareIcon";
 import SideArrowIcon from "@/utils/icons/SideArrowIcon";
@@ -72,8 +75,46 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
 
             {/* google ads*/}
-            <div className="w-[574px] h-[124px] bg-[#8D4E83] mx-auto center text-white">
+            <div className="w-[574px] min-h-[124px] bg-[#8D4E83] mx-auto center text-white">
                 Google ads
+            </div>
+
+
+            {/* VIEWS AND APPLY */}
+
+            <div className="w-full flex justify-between items-center gap-[14px] mt-[14px]">
+
+                <div className="w-full px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
+                    <LetterIcon />
+                    <div className="flex flex-col items-start justify-start">
+                        <h3 className="textt-[#272D37] font-[600] text-[22px]">{flat.views}</h3>
+                        <p>Total Viewing</p>
+                    </div>
+                </div>
+
+                <div className="w-full px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
+                    <LetterIcon />
+                    <div className="flex flex-col items-start justify-start">
+                        <h3 className="textt-[#272D37] font-[600] text-[22px]">{flat.views}</h3>
+                        <p>Total Viewing</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            {/* description */}
+            <div className="mt-[14px]">
+                <p className="leading-[20px] text-[14px] font-[500]">আমাদের চ্যানেলে 4k Video quality এবং HD sound quality তে একজন আদর্শ  মানুষের জীবন কেমন হওয়া উচিৎ, ইতিহাসের শিক্ষনীয় ঘটনা এবং ইসলামী জীবন বিধান সম্পর্কে জানতে পারবেন। <br /> <br /> আমাদের চ্যানেলে 4k Video quality এবং HD sound quality তে একজন আদর্শ  মানুষের জীবন কেমন হওয়া উচিৎ, ইতিহাসের শিক্ষনীয় ঘটনা এবং ইসলামী জীবন বিধান সম্পর্কে জানতে পারবেন...more। </p>
+            </div>
+
+
+            {/* reviews */}
+
+            <div className="w-[617px] min-h-[100px] center gap-[20px] mt-[26px]">
+                <RatingLeft />
+                <RatingRight />
+
             </div>
 
         </div>

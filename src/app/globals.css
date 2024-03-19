@@ -37,3 +37,22 @@
 .sectionHeight {
   height: calc(100% - 76px);
 }
+
+/* height for cards in small device */
+@media screen and (min-width:0px) and (max-width:450px) {
+  .contentHeight {
+    height: calc(100% - 215px);
+  }
+}
+
+@media screen and (min-width:450px) and (max-width:1270px) {
+  .contentHeight {
+    height: calc(100% - 315px);
+  }
+}
+
+
+/* details section height */
+.detailsSectionHeight {
+  height: calc(100% - 107px);
+}
