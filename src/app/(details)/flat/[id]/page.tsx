@@ -51,7 +51,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
 
             {/* flat details */}
-            <div className="flex justify-between items-center w-full mt-[27px] flex-wrap gap-[10px] my-[10px] xsm:my-[0]">
+            <div className="flex justify-between items-center w-full mt-[27px] flex-wrap gap-[10px] my-[10px] xsm:mt-[21px] xsm:mb-[24px]">
                 <p className="text-[16px] italic font-[300]">{flat.subName}</p>
                 <h2 className="text-[24px] font-[700]">{flat.price}</h2>
                 <button className="w-[93px] center gap-[10px] bg-[#F0F2F6] rounded-[6px] pt-[9px] pb-[11px]">

@@ -45,7 +45,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                     <EyeIcon />  <p className="text-[10px] font-[9000]">{data.views}</p>
                 </div>
 
-                {/* year */}
+                {/* applies */}
                 <div className="absolute top-[9.81px] left-[87.87px] w-[44px] h-[30px] p-[5px] center bg-[#00000080] text-white rounded-[5px]">
                     <p className="text-[10px] font-[9000]">{data.apply}</p>
                 </div>
@@ -110,9 +110,9 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
                         }
                     </div>
 
-                    <button className="w-[93px] h-[40px] px-[14px] flex items-center gap-[10px] bg-white rounded-[6px]">
+                    <Link href={`/select/${data.id}`} className="w-[93px] h-[40px] px-[14px] flex items-center gap-[10px] bg-white rounded-[6px]">
                         Apply  <ArrowLeft />
-                    </button>
+                    </Link>
                 </div>
             </div>
 
