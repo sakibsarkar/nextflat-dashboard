@@ -46,7 +46,7 @@ export const displayData: DisplayDataItem[] = [
         ]
     },
     {
-        id: "101",
+        id: "102",
         name: "Flat - 123 m²",
         subName: "Dublin 01 - IFSC",
         views: 65,
@@ -80,7 +80,7 @@ export const displayData: DisplayDataItem[] = [
         ]
     },
     {
-        id: "101",
+        id: "104",
         name: "Flat - 123 m²",
         subName: "Dublin 01 - IFSC",
         views: 65,
@@ -114,7 +114,7 @@ export const displayData: DisplayDataItem[] = [
         ]
     },
     {
-        id: "101",
+        id: "104",
         name: "Flat - 123 m²",
         subName: "Dublin 01 - IFSC",
         views: 65,
@@ -148,7 +148,7 @@ export const displayData: DisplayDataItem[] = [
         ]
     },
     {
-        id: "101",
+        id: "105",
         name: "Flat - 123 m²",
         subName: "Dublin 01 - IFSC",
         views: 65,
@@ -182,7 +182,7 @@ export const displayData: DisplayDataItem[] = [
         ]
     },
     {
-        id: "101",
+        id: "106",
         name: "Flat - 123 m²",
         subName: "Dublin 01 - IFSC",
         views: 65,
@@ -215,4 +215,5 @@ export const displayData: DisplayDataItem[] = [
             },
         ]
     },
+
 ]

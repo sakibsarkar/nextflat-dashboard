@@ -5,18 +5,18 @@ import React, { ReactNode } from "react";
 
 const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
     return (
-        <div className="max-w-[1440px] mx-auto h-screen flex items-start justify-start flex-col">
+        <div className="max-w-[1440px] mx-auto xl:h-screen flex items-start justify-start flex-col">
             <Navbar />
-            <div className="w-full flex sectionHeight justify-between items-start gap-[6px]">
-                <div className="min-w-[400px] h-full">
+            <div className="w-full flex flex-col-reverse xl:flex-row xl:sectionHeight justify-between items-center gap-[6px] xl:items-start">
+                <div className="w-full xl:min-w-[400px] xl:max-w-[400px] h-full">
                     <MapBox />
                 </div>
 
-                <div className="w-full h-full overflow-auto">
+                <div className="w-full xl:h-full xl:overflow-auto">
                     <Cards />
                 </div>
 
-                <div className="min-w-[470px] h-full bg-green-400">
+                <div className="xl:min-w-[470px] xl:max-w-[470px] xl:h-full overflow-auto smoothBar pb-[37px]">
                     {children}
                 </div>
             </div>

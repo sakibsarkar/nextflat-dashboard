@@ -1,6 +1,8 @@
 import ArrowLeft from "@/utils/icons/ArrowLeft";
 import BoldFlagIcon from "@/utils/icons/BoldFlagIcon";
 import CrossIcon from "@/utils/icons/CrossIcon";
+import DoneIcon from "@/utils/icons/DoneIcon";
+import ErrorIcon from "@/utils/icons/ErrorIcon";
 import HeartIcon from "@/utils/icons/HeartIcon";
 import ImageSlider from "@/components/ImageSlider";
 import LetterIcon from "@/utils/icons/LetterIcon";
@@ -8,6 +10,7 @@ import RatingLeft from "@/components/Ratings/RatingLeft";
 import RatingRight from "@/components/Ratings/RatingRight";
 import ShareIcon from "@/utils/icons/ShareIcon";
 import SquareShareIcon from "@/utils/icons/SquareShareIcon";
+import WarningIcon from "@/utils/icons/WarningIcon";
 import { displayData } from "@/utils/mock/Data/DisplayData";
 
 interface PageProps {
@@ -36,7 +39,7 @@ const page: React.FC<PageProps> = ({ params }) => {
                 </div>
 
 
-                <div className="w-full h-[200px] xsm:h-[297px] sm:h-[400px] relative overflow-hidden ">
+                <div className="w-full h-[200px] relative overflow-hidden ">
                     <ImageSlider imgData={flat.images} width={617} height={297} />
                 </div>
 
@@ -68,16 +71,16 @@ const page: React.FC<PageProps> = ({ params }) => {
 
 
             {/* google ads*/}
-            <div className="w-full bg-[#8D4E83] mx-auto center text-white">
+            <div className="w-full min-h-[36px] bg-[#8D4E83] mx-auto center text-white">
                 Google ads
             </div>
 
 
             {/* VIEWS AND APPLY */}
 
-            <div className="w-full flex justify-between items-center gap-[14px] mt-[14px]">
+            <div className="w-full center gap-[10px] mt-[14px] flex-wrap">
 
-                <div className="w-full px-[10px] xsm:px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
+                <div className="p-[9px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
                     <LetterIcon />
                     <div className="flex flex-col items-start justify-start">
                         <h3 className="text-[#272D37] font-[600] text-[15px] xsm:text-[22px]">{flat.views}</h3>
@@ -85,11 +88,30 @@ const page: React.FC<PageProps> = ({ params }) => {
                     </div>
                 </div>
 
-                <div className="w-full px-[10px] xsm:px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
+                <div className="p-[9px]  flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
                     <LetterIcon />
                     <div className="flex flex-col items-start justify-start">
                         <h3 className="text-[#272D37] font-[600] text-[15px] xsm:text-[22px]">{flat.apply}</h3>
                         <p className="text-[12px] xsm:text-[14px]">Total Applies</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-start justify-start">
+                    <div className="center gap-[4px]">
+                        <DoneIcon />
+                        <p className="text-[14px] font-[500]">Requirements 1</p>
+                    </div>
+                    <div className="center gap-[4px]">
+                        <DoneIcon />
+                        <p className="text-[14px] font-[500]">Requirements 1</p>
+                    </div>
+                    <div className="center gap-[4px]">
+                        <WarningIcon />
+                        <p className="text-[14px] font-[500]">Requirements 1</p>
+                    </div>
+                    <div className="center gap-[4px]">
+                        <ErrorIcon />
+                        <p className="text-[14px] font-[500]">Requirements 1</p>
                     </div>
                 </div>
 
