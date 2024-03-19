@@ -88,7 +88,7 @@ const DisplayCard: React.FC<propsType> = ({ data }) => {
 
                 <div className="flex flex-col gap-[5.91px]">
                     <div className="flex flex-col gap-[0px]">
-                        <Link href={`/flat/${data.id}`} className="text-[24px] font-[500]">{data.name}</Link>
+                        <Link href={`/flat/${data.id}`} className="text-[24px] font-[500] hover:underline">{data.name}</Link>
                         <p className="text-[16px] font-[300] italic">{data.subName}</p>
                     </div>
 

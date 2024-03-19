@@ -16,7 +16,7 @@ const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
 
                 <div className="xl:min-w-[746px] h-full">
                     <MapBox />
-                    <div className="w-[746px] h-[238px]">
+                    <div className="w-full h-[238px]">
                         <ChartBox chartData={chartData} />
                     </div>
                 </div>

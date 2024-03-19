@@ -95,8 +95,8 @@ const Page: React.FC<PageProps> = ({ params }) => {
                 <div className="w-full px-[20px] py-[16px] flex items-center justify-start gap-[12px] border-[1px] border-[#EAEBF0] rounded-[10px]">
                     <LetterIcon />
                     <div className="flex flex-col items-start justify-start">
-                        <h3 className="textt-[#272D37] font-[600] text-[22px]">{flat.views}</h3>
-                        <p>Total Viewing</p>
+                        <h3 className="textt-[#272D37] font-[600] text-[22px]">{flat.apply}</h3>
+                        <p>Total Applies</p>
                     </div>
                 </div>
 
