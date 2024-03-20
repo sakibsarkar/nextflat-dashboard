@@ -36,8 +36,8 @@ const BasicInfo = () => {
 
             <div
               style={gradient}
-              className={`h-full w-[80px] absolute p-[19px] rounded-[51px] ${
-                saleMode === "Rent" ? "right-0" : "left-0"
+              className={`h-full w-[80px] absolute p-[19px] rounded-[51px] duration-[0.2s] ${
+                saleMode === "Rent" ? "right-0" : "right-[49%]"
               }`}
             >
               <p className={`text-[14px] font-[700] text-white  `}>
