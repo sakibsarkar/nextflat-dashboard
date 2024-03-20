@@ -5,7 +5,9 @@ import { useState } from "react";
 
 const BasicInfo = () => {
   const [saleMode, setSaleMode] = useState("Rent");
-
+  const gradient = {
+    background: "linear-gradient(128deg, #FF5A00 28.11%, #F00 164.76%)",
+  };
   return (
     <div className="w-full flex justify-between items-start gap-[30px] mt-[35px]">
       {/* left side */}
@@ -18,9 +20,30 @@ const BasicInfo = () => {
         </div>
 
         <div className="mt-[32px] flex items-center justify-between w-full">
-          <div className="w-[154px] h-[61px] rounded-full bg-[#3D3D3D] px-[20px]">
-            <button>Sale</button>
-            <button>Rent</button>
+          <div className="w-[154px] h-[61px] flex items-center justify-between rounded-full bg-[#3D3D3D] px-[20px] relative">
+            <button
+              className="text-[14px] font-[700] text-white"
+              onClick={() => setSaleMode("Sale")}
+            >
+              Sale
+            </button>
+            <button
+              className="text-[14px] font-[700] text-white"
+              onClick={() => setSaleMode("Rent")}
+            >
+              Rent
+            </button>
+
+            <div
+              style={gradient}
+              className={`h-full w-[80px] absolute p-[19px] rounded-[51px] ${
+                saleMode === "Rent" ? "right-0" : "left-0"
+              }`}
+            >
+              <p className={`text-[14px] font-[700] text-white  `}>
+                {saleMode}
+              </p>
+            </div>
           </div>
           <div className="w-[199px] h-[63px] relative">
             <InputFeild text="You are*" placeholder="Real estate Agency" />
