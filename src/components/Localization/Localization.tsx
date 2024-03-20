@@ -1,7 +1,7 @@
 "use client";
 import MapBox from "../MapBox/MapBox";
 import EditPenIcon from "@/utils/icons/EditPenIcon";
-import InputSearchOption from './../InputSearchOption/InputSearchOption';
+import InputSearchOption from "./../InputSearchOption/InputSearchOption";
 
 const Localization = () => {
   return (
@@ -40,7 +40,7 @@ const Localization = () => {
         </div>
         <div className="flex-1">
           <div
-            className={`md:w-[97%] lg:flex-1 lg:h-full overflow-hidden flex-shrink-0 custom-transition `}
+            className={`md:w-[97%] xl:w-[868px] lg:h-full overflow-hidden flex-shrink-0 duration-[0.3s] `}
           >
             <MapBox />
           </div>
