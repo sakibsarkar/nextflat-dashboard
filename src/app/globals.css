@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .center {
-    @apply flex justify-center items-center
+    @apply flex justify-center items-center;
   }
 
   .col-center {
-    @apply flex flex-col justify-center items-center
+    @apply flex flex-col justify-center items-center;
   }
 
   .imgFit {
-    @apply w-full h-full object-cover
+    @apply w-full h-full object-cover;
   }
 }
-
 
 .smoothBar::-webkit-scrollbar {
   width: 8px;
   opacity: 1;
-
 }
 
 .smoothBar::-webkit-scrollbar-thumb {
@@ -30,27 +27,30 @@
 }
 
 .smoothBar:hover::-webkit-scrollbar-thumb {
-  background-color: #C1C1C1;
+  background-color: #c1c1c1;
 }
-
 
 .sectionHeight {
   height: calc(100% - 76px);
 }
 
+.gridBox {
+  border-radius: 5px;
+  background-color: #d9d9d9;
+}
+
 /* height for cards in small device */
-@media screen and (min-width:0px) and (max-width:450px) {
+@media screen and (min-width: 0px) and (max-width: 450px) {
   .contentHeight {
     height: calc(100% - 215px);
   }
 }
 
-@media screen and (min-width:450px) and (max-width:1270px) {
+@media screen and (min-width: 450px) and (max-width: 1270px) {
   .contentHeight {
     height: calc(100% - 315px);
   }
 }
-
 
 /* details section height */
 .detailsSectionHeight {

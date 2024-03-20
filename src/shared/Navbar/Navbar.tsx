@@ -35,7 +35,7 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        <Link href={"/createad"} className="text-[16px] font-[500] text-white w-[168.269px] h-[30px] bg-[#3C50E0] pl-[10.32px] flex justify-start items-center gap-[8.33px] rounded-full"><HousePlusIcon />Create an Ad</Link>
+                        <Link href={"/create"} className="text-[16px] font-[500] text-white w-[168.269px] h-[30px] bg-[#3C50E0] pl-[10.32px] flex justify-start items-center gap-[8.33px] rounded-full"><HousePlusIcon />Create an Ad</Link>
 
                         <Link href={"/"} className="text-[16px] font-[500] text-white w-[168.269px] h-[30px] bg-[#3C50E0] flex justify-center items-center gap-[8.33px] rounded-full">Log in / Sign up</Link>
 
