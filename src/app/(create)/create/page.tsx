@@ -2,13 +2,16 @@ import BasicInfo from "@/components/BasicInfo/BasicInfo";
 import InputFeild from "@/components/InputFeild/InputFeild";
 import Localization from "@/components/Localization/Localization";
 import MapBox from "@/components/MapBox/MapBox";
+import SiteBox from "@/components/SiteBox/SiteBox";
 
 const page = () => {
   return (
     <main className="px-[92px] w-full">
-      <div className="w-full center gap-[19px] flex-col">
-        <h2 className="text-[32px] font-[500]">Create a new ads</h2>
-        <p className="text-[16px] font-[400]">
+      <div className="w-full flex items-start justify-start gap-[19px] flex-col">
+        <h2 className="text-[32px] font-[500] w-full text-center">
+          Create a new ads
+        </h2>
+        <p className="text-[16px] font-[400] w-full text-center">
           Welcome to our form where you add as much information as need about
           your property
         </p>
@@ -41,6 +44,39 @@ const page = () => {
 
         <Localization />
         <BasicInfo />
+        <div className="mt-[28px] flex justify-between items-center w-[1420px]">
+          <div className="relative w-[157px] h-[63px]">
+            <InputFeild text="Bathroom" placeholder="2" />
+          </div>
+
+          <div className="flex flex-col items-start justify-start">
+            <p className="text-[#868686] font-[300] text-[14px]">
+              Do you want to publish this add in other referencing site:
+            </p>
+            <div className="center gap-[38px]">
+              <div className="center gap-[7px]">
+                <input type="checkbox" name="reatol" id="reatol" />
+                <label htmlFor="reatol" className="text-[#64748B] text-[14px]">
+                  Reatol.com
+                </label>
+              </div>
+              <div className="center gap-[7px]">
+                <input type="checkbox" name="lebon" id="lebon" />
+                <label htmlFor="lebon" className="text-[#64748B] text-[14px]">
+                  le bon coin.com
+                </label>
+              </div>
+              <div className="center gap-[7px]">
+                <input type="checkbox" name="zillow" id="zillow" />
+                <label htmlFor="zillow" className="text-[#64748B] text-[14px]">
+                  Zillow.com
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <SiteBox />
+        </div>
       </div>
     </main>
   );

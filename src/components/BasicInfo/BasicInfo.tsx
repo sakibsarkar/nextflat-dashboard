@@ -1,11 +1,11 @@
 "use client";
-import ArrowDownIcon from "@/utils/icons/ArrowDownIcon";
-import EditPenIcon from "@/utils/icons/EditPenIcon";
-import SearchIcon from "@/utils/icons/SearchIcon";
 import Image from "next/image";
 import InputFeild from "../InputFeild/InputFeild";
+import { useState } from "react";
 
 const BasicInfo = () => {
+  const [saleMode, setSaleMode] = useState("Rent");
+
   return (
     <div className="w-full flex justify-between items-start gap-[30px] mt-[35px]">
       {/* left side */}
@@ -18,7 +18,10 @@ const BasicInfo = () => {
         </div>
 
         <div className="mt-[32px] flex items-center justify-between w-full">
-          <div className="w-[154px] h-[61px] rounded-full bg-[#3D3D3D]"></div>
+          <div className="w-[154px] h-[61px] rounded-full bg-[#3D3D3D] px-[20px]">
+            <button>Sale</button>
+            <button>Rent</button>
+          </div>
           <div className="w-[199px] h-[63px] relative">
             <InputFeild text="You are*" placeholder="Real estate Agency" />
           </div>
@@ -77,6 +80,15 @@ const BasicInfo = () => {
               Surface (m2)*
             </p>
           </div>
+        </div>
+
+        <div className="mt-[30px] gap-[106px] flex items-center justify-between">
+          <div className="w-[157px] h-[63px] relative">
+            <InputFeild text="Bedroom*" placeholder="2" />
+          </div>
+          <button className="max-w-[368px] bg-[#5956E9] text-white rounded-[8px] p-[14px] flex justify-between">
+            Add a Bedroom to rent separately +
+          </button>
         </div>
       </div>
 
