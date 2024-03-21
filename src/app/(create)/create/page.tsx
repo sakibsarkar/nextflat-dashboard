@@ -74,9 +74,16 @@ const page = () => {
                     <SiteBox />
                 </div>
 
-                {/* bed room */}
+                {/* bed room1 */}
+                <Addroom title="Bedroom 1" isUrgent={true} />
 
-                <Addroom title="Bedroom" isUrgent={true} />
+                {/* bed room2 */}
+                <Addroom title="Bedroom 2" isUrgent={false} />
+                {/* bed room 3*/}
+                <Addroom title="Bedroom 3" isUrgent={true} />
+
+                {/* bed room 4*/}
+                <Addroom title="Bedroom 4" isUrgent={true} />
             </div>
         </main>
     );
