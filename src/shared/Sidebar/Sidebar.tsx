@@ -28,8 +28,10 @@ const Sidebar = () => {
 
             // ** initialy hiding the sidebar for small devices **
             if (width && width <= 880) {
-                setShowBar(false);
+                return setShowBar(false);
             }
+
+            setShowBar(true);
         };
 
         window.addEventListener("resize", updateHeight);
