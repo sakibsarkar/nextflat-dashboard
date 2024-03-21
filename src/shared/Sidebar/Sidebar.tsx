@@ -22,7 +22,10 @@ const Sidebar = () => {
 
     // ----- Run the effect only once ------
     useLayoutEffect(() => {
+
+
         const updateHeight = () => {
+
             // ----- ** to check the device width **-----
             const width = window.screen.width;
 
@@ -34,8 +37,11 @@ const Sidebar = () => {
             setShowBar(true);
         };
 
+
+        // ---- update the width everytime screen width get changes--------
         window.addEventListener("resize", updateHeight);
 
+        // **** ---- event cleanup function
         return () => window.removeEventListener("resize", updateHeight);
     }, [setShowBar]);
 

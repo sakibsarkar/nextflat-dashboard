@@ -1,3 +1,4 @@
+import Addroom from "@/components/Addroom/Addroom";
 import BasicInfo from "@/components/BasicInfo/BasicInfo";
 import InputFeild from "@/components/InputFeild/InputFeild";
 import Localization from "@/components/Localization/Localization";
@@ -72,6 +73,10 @@ const page = () => {
 
                     <SiteBox />
                 </div>
+
+                {/* bed room */}
+
+                <Addroom title="Bedroom" isUrgent={true} />
             </div>
         </main>
     );
