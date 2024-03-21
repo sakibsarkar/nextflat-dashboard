@@ -2,16 +2,13 @@
 import ArrowLeft from "@/utils/icons/ArrowLeft";
 import BoldFlagIcon from "@/utils/icons/BoldFlagIcon";
 import CrossIcon from "@/utils/icons/CrossIcon";
-import DisplayCard from "@/Cards/DisplayCard/DisplayCard";
 import HeartIcon from "@/utils/icons/HeartIcon";
 import ImageSlider from "@/components/ImageSlider";
 import LetterIcon from "@/utils/icons/LetterIcon";
-import Navbar from "@/shared/Navbar/Navbar";
 import RatingLeft from "@/components/Ratings/RatingLeft";
 import RatingRight from "@/components/Ratings/RatingRight";
 import React from "react";
 import ShareIcon from "@/utils/icons/ShareIcon";
-import SideArrowIcon from "@/utils/icons/SideArrowIcon";
 import SquareShareIcon from "@/utils/icons/SquareShareIcon";
 import { displayData } from "@/utils/mock/Data/DisplayData";
 
