@@ -3,6 +3,7 @@ import BasicInfo from "@/components/BasicInfo/BasicInfo";
 import InputFeild from "@/components/InputFeild/InputFeild";
 import Localization from "@/components/Localization/Localization";
 import SiteBox from "@/components/SiteBox/SiteBox";
+import WhatAreWeLooking from "@/components/WhatAreWeLooking/WhatAreWeLooking";
 
 const page = () => {
     return (
@@ -84,6 +85,9 @@ const page = () => {
 
                 {/* bed room 4*/}
                 <Addroom title="Bedroom 4" isUrgent={true} />
+
+                {/* what are we looking for */}
+                <WhatAreWeLooking />
             </div>
         </main>
     );
