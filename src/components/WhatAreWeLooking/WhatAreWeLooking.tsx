@@ -23,7 +23,7 @@ const WhatAreWeLooking = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-start mt-[19px]  lg:gap-[120px] flex-wrap gap-[20px]">
+      <div className="flex items-center justify-center sm:justify-start mt-[19px] lg:gap-[120px] flex-wrap gap-[20px]">
         <EnableBox text="Guarantor allow or request" />
         <div className="relative w-[269px] h-[63px]">
           <InputFeild text="Other" />
