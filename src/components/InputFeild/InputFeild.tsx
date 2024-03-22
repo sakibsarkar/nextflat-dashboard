@@ -11,7 +11,7 @@ const InputFeild: React.FC<{
       <input
         type={type || "text"}
         className=" w-full h-full outline-none pl-[20px] py-[18px]"
-        placeholder={placeholder}
+        placeholder={placeholder || ""}
         name={feildName || ""}
       />
       <p className="absolute px-[5px] text-[14px] font-[300] bg-white text-[#868686] left-[15px] top-[-15px]">
