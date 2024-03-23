@@ -48,7 +48,7 @@ const FilterBox: React.FC<{ optionArr: string[]; placeholder: string }> = ({
       </div>
 
       <button className="w-full py-[13px] bg-[#6979F8] rounded-[4px] text-white mt-[19px]">
-        Apply
+        Apply Filter
       </button>
     </div>
   );

@@ -20,7 +20,15 @@ const Addroom = ({
           <EnableBox text="Private Balcony" />
           <div className="flex gap-3 items-start">
             <EnableBox text="Furniture" />
-            <WhatIsInclude serviceArr={[""]} />
+            <WhatIsInclude
+              serviceArr={[
+                "Desk",
+                "Wardrobe",
+                "Bed",
+                "Washer / dryer",
+                "other",
+              ]}
+            />
           </div>
           <div className="flex gap-5 mt-[20px]">
             <div className="w-[169px] h-[63px] relative">
